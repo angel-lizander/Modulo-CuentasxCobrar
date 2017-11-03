@@ -1,6 +1,6 @@
 ﻿namespace Módulo_CC
 {
-    partial class Form1
+    partial class Principal
     {
         /// <summary>
         /// Variable del diseñador necesaria.

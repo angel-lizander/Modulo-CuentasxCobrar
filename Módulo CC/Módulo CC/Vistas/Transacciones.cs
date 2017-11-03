@@ -8,11 +8,11 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace Módulo_CC
+namespace Módulo_CC.Vistas
 {
-    public partial class Form1 : Form
+    public partial class Transacciones : Form
     {
-        public Form1()
+        public Transacciones()
         {
             InitializeComponent();
         }

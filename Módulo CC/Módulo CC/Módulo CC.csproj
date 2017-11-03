@@ -49,17 +49,35 @@
     <Compile Include="Clases\Clientes.cs" />
     <Compile Include="Clases\Cuentas.cs" />
     <Compile Include="Clases\Transacciones.cs" />
-    <Compile Include="Form1.cs">
+    <Compile Include="Principal.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form1.Designer.cs">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <Compile Include="Principal.Designer.cs">
+      <DependentUpon>Principal.cs</DependentUpon>
     </Compile>
     <Compile Include="Ifunciones.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="Form1.resx">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <Compile Include="Vistas\Clientes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vistas\Clientes.Designer.cs">
+      <DependentUpon>Clientes.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Vistas\Gestión Documentos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vistas\Gestión Documentos.Designer.cs">
+      <DependentUpon>Gestión Documentos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Vistas\Transacciones.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vistas\Transacciones.Designer.cs">
+      <DependentUpon>Transacciones.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Principal.resx">
+      <DependentUpon>Principal.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -70,6 +88,15 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="Vistas\Clientes.resx">
+      <DependentUpon>Clientes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vistas\Gestión Documentos.resx">
+      <DependentUpon>Gestión Documentos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vistas\Transacciones.resx">
+      <DependentUpon>Transacciones.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
