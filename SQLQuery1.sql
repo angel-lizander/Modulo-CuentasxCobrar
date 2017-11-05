@@ -1,37 +1,51 @@
 Create database CuentasxCobrar
 go
 
-
-create table Documentos(
-IDD int primary  key,
-Descripción varchar(90)
-Cuenta int,
+USE CuentasxCobrar
+create table Cuentas(
+IDDocumentos int primary  key identity,
+Descripcion varchar(90),
+Cuentacontable int,
 Estado bit);
 
 create table Clientes(
-IDC int primary key,
+IDClientes int primary key identity,
 Nombre varchar(40),
-Cedula int,
+Cedula int unique,
 Credito float,
 Estado bit);
 
 create table Transacciones(
-IDT int primary key,
-TipoDo char(2),
+IDTransacciones int primary key identity,
+TipoMovimiento char(2),
+IDTipoDocumento int,
+IDCliente int,
 Fecha datetime, 
-Monto float
-Doctransacciones int,
-IDC int,
-);
+Monto decimal(5,0));
 
 create table Asientos(
-IDA int,
+IDAsientos int identity,
 Descripcion varchar(20),
-IDD int, 
+IDClientes int, 
 Cuenta int,
-TipoMo char(2),
+TipoMovimiento char(2),
 FechaAsiento datetime, 
 MontoAsiento float,
-Estado bool,
-IDD int FOREIGN KEY REFERENCES Documentos(IDD) 
-Cuenta int FOREIGN KEY REFERENCES Documentos(int)); 
+Estado bit);
+
+Create table CuentasContable(
+IDCuentasContables int identity,
+CuentasContables int)
+ go
+
+ Insert into CuentasContable values (001002)
+ Insert into Cuentas values ('Nota de credito', 001002,1)
+
+ Create table Asientos(
+  noasiento int PRIMARY KEY,
+  descripcion varchar(200),
+  fechaasiento varchar(10),
+  cuenta int, 
+  tipomovimiento varchar(4),
+  monto float(50)
+)

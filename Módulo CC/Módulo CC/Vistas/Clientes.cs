@@ -16,5 +16,21 @@ namespace Módulo_CC.Vistas
         {
             InitializeComponent();
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            bool estado;
+
+            if (radioButton1.Checked)
+            {
+               estado = true;
+            }
+            else
+            {
+                estado = false;
+            }
+            var Clientes = new Clases.Clientes(txtNombre.Text,Convert.ToInt32(txtCedula.Text),Convert.ToDouble(txtCredito.Text),estado);
+            Clientes.Registrar();
+        }
     }
 }

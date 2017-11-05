@@ -1,0 +1,15 @@
+C:\Users\Angel Lizander\Documents\GitHub\Modulo-CuentasxCobrar\Módulo CC\Módulo CC\obj\Debug\Módulo_CC.Principal.resources
+C:\Users\Angel Lizander\Documents\GitHub\Modulo-CuentasxCobrar\Módulo CC\Módulo CC\obj\Debug\Módulo_CC.Properties.Resources.resources
+C:\Users\Angel Lizander\Documents\GitHub\Modulo-CuentasxCobrar\Módulo CC\Módulo CC\obj\Debug\Módulo_CC.Vistas.Clientes.resources
+C:\Users\Angel Lizander\Documents\GitHub\Modulo-CuentasxCobrar\Módulo CC\Módulo CC\obj\Debug\Módulo_CC.Vistas.Gestión_Documentos.resources
+C:\Users\Angel Lizander\Documents\GitHub\Modulo-CuentasxCobrar\Módulo CC\Módulo CC\obj\Debug\Módulo_CC.Vistas.ListaClientes.resources
+C:\Users\Angel Lizander\Documents\GitHub\Modulo-CuentasxCobrar\Módulo CC\Módulo CC\obj\Debug\Módulo_CC.Vistas.Transacciones.resources
+C:\Users\Angel Lizander\Documents\GitHub\Modulo-CuentasxCobrar\Módulo CC\Módulo CC\obj\Debug\Módulo CC.csproj.GenerateResource.Cache
+C:\Users\Angel Lizander\Documents\GitHub\Modulo-CuentasxCobrar\Módulo CC\Módulo CC\obj\Debug\Módulo CC.csproj.CoreCompileInputs.cache
+C:\Users\Angel Lizander\Documents\GitHub\Modulo-CuentasxCobrar\Módulo CC\Módulo CC\bin\Debug\Módulo CC.exe.config
+C:\Users\Angel Lizander\Documents\GitHub\Modulo-CuentasxCobrar\Módulo CC\Módulo CC\bin\Debug\Módulo CC.exe
+C:\Users\Angel Lizander\Documents\GitHub\Modulo-CuentasxCobrar\Módulo CC\Módulo CC\bin\Debug\Módulo CC.pdb
+C:\Users\Angel Lizander\Documents\GitHub\Modulo-CuentasxCobrar\Módulo CC\Módulo CC\obj\Debug\Módulo CC.exe
+C:\Users\Angel Lizander\Documents\GitHub\Modulo-CuentasxCobrar\Módulo CC\Módulo CC\obj\Debug\Módulo CC.pdb
+C:\Users\Angel Lizander\Documents\GitHub\Modulo-CuentasxCobrar\Módulo CC\Módulo CC\obj\Debug\Módulo CC.csprojResolveAssemblyReference.cache
+C:\Users\Angel Lizander\Documents\GitHub\Modulo-CuentasxCobrar\Módulo CC\Módulo CC\obj\Debug\Módulo_CC.Vistas.Asientos.resources

@@ -33,6 +33,7 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
+    <Reference Include="System.Configuration" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
@@ -47,15 +48,22 @@
   <ItemGroup>
     <Compile Include="Clases\Asientos.cs" />
     <Compile Include="Clases\Clientes.cs" />
+    <Compile Include="Clases\Consultas.cs" />
     <Compile Include="Clases\Cuentas.cs" />
     <Compile Include="Clases\Transacciones.cs" />
-    <Compile Include="Principal.cs">
+    <Compile Include="Ifunciones.cs" />
+    <Compile Include="Vistas\Asientos.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Principal.Designer.cs">
+    <Compile Include="Vistas\Asientos.Designer.cs">
+      <DependentUpon>Asientos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Vistas\Principal.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vistas\Principal.Designer.cs">
       <DependentUpon>Principal.cs</DependentUpon>
     </Compile>
-    <Compile Include="Ifunciones.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Vistas\Clientes.cs">
@@ -70,13 +78,22 @@
     <Compile Include="Vistas\Gestión Documentos.Designer.cs">
       <DependentUpon>Gestión Documentos.cs</DependentUpon>
     </Compile>
+    <Compile Include="Listado y actualizaciones\ListaClientes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Listado y actualizaciones\ListaClientes.Designer.cs">
+      <DependentUpon>ListaClientes.cs</DependentUpon>
+    </Compile>
     <Compile Include="Vistas\Transacciones.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Vistas\Transacciones.Designer.cs">
       <DependentUpon>Transacciones.cs</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="Principal.resx">
+    <EmbeddedResource Include="Vistas\Asientos.resx">
+      <DependentUpon>Asientos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vistas\Principal.resx">
       <DependentUpon>Principal.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
@@ -93,6 +110,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Vistas\Gestión Documentos.resx">
       <DependentUpon>Gestión Documentos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Listado y actualizaciones\ListaClientes.resx">
+      <DependentUpon>ListaClientes.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Vistas\Transacciones.resx">
       <DependentUpon>Transacciones.cs</DependentUpon>
