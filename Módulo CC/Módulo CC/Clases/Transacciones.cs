@@ -22,6 +22,17 @@ namespace Módulo_CC.Clases
         public decimal Monto { get; set; }
 
 
+        public Transacciones(int IDTransaccion, string Tipo, int IDDocumento, DateTime Fecha, int IDCliente, decimal Monto)
+        {
+
+            this.IDTransaccion = IDTransaccion;
+            this.Tipo = Tipo;
+            this.IDDocumento = IDDocumento;
+            this.Fecha = Fecha;
+            this.IDCliente = IDCliente;
+            this.Monto = Monto;
+        }
+
         public Transacciones(string Tipo, int IDDocumento, DateTime Fecha, int IDCliente, decimal Monto )
         {
 
@@ -31,6 +42,15 @@ namespace Módulo_CC.Clases
             this.Fecha = Fecha;
             this.IDCliente = IDCliente;
             this.Monto = Monto;
+        }
+
+        
+
+        public Transacciones(int IDTransaccion)
+        {
+
+            this.IDTransaccion = IDTransaccion;
+          
         }
 
         public bool Registrar()
@@ -68,18 +88,14 @@ namespace Módulo_CC.Clases
             try
             {
                 cn.Open();
-                string quety = ("Update Transacciones set Nombre=@Nombre, Tipo=@Tipo, Cuentas=@Cuentas IDDocumento=@IDDocumento, Fecha=@Fecha, IDCliente@IDCliente, Cuentas=@Cuenta WHERE IDTransaccion=@IDTransaccion");
+                string quety = ("Update Transacciones set TipoMovimiento=@Tipo, IDTipoDocumento=@IDDocumento, Fecha=@Fecha, IDCliente=@IDCliente Where IDTransacciones=@IDTransaccion");
                 SqlCommand myCommand = new SqlCommand(quety, cn);
-                myCommand.Parameters.AddWithValue("@Nombre", Nombre);
                 myCommand.Parameters.AddWithValue("@Tipo", Tipo);
-                myCommand.Parameters.AddWithValue("@Cuentas", Cuentas);
                 myCommand.Parameters.AddWithValue("@IDDocumento", IDDocumento);
                 myCommand.Parameters.AddWithValue("@Fecha", Fecha);
                 myCommand.Parameters.AddWithValue("@IDCliente", IDCliente);
-                myCommand.Parameters.AddWithValue("@Cuentas", Cuentas);
                 myCommand.Parameters.AddWithValue("@IDTransaccion", IDTransaccion);
                 myCommand.ExecuteNonQuery();
-                cn.Close();
                 MessageBox.Show("Datos actualizados correctamente");
             }
 
@@ -88,12 +104,39 @@ namespace Módulo_CC.Clases
 
                 MessageBox.Show(p.Message);
             }
+
+            finally
+            {
+                cn.Close();
+            }
             return true;
         }
 
+
+
         public bool Eliminar()
         {
-            throw new NotImplementedException();
+            try
+            {
+                cn.Open();
+                string query = ("DELETE FROM Transacciones WHERE IDTransacciones=@IDTransacciones");
+                SqlCommand mycommand = new SqlCommand(query, cn);
+                mycommand.Parameters.AddWithValue("@IDTransacciones", IDTransaccion);
+                mycommand.ExecuteNonQuery();
+                cn.Close();
+                MessageBox.Show("La transacción se eliminó correctamente");
+
+            }
+            catch (SqlException p)
+            {
+
+                MessageBox.Show(p.Message);
+            }
+            finally
+            {
+                cn.Close();
+            }
+            return true;
         }
 
        

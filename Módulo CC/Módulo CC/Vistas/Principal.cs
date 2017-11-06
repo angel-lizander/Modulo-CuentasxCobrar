@@ -53,5 +53,11 @@ namespace Módulo_CC
             var Listado = new Listado.ListadoAsientos();
             Listado.ShowDialog();
         }
+
+        private void transaccionesToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            var Transacciones = new Listado.ListadoTransacciones();
+            Transacciones.ShowDialog();
+        }
     }
 }

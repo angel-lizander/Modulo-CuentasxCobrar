@@ -59,6 +59,12 @@
     <Compile Include="Listado\ListadoAsientos.Designer.cs">
       <DependentUpon>ListadoAsientos.cs</DependentUpon>
     </Compile>
+    <Compile Include="Listado\ListadoTransacciones.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Listado\ListadoTransacciones.Designer.cs">
+      <DependentUpon>ListadoTransacciones.cs</DependentUpon>
+    </Compile>
     <Compile Include="Vistas\Asientos.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -99,6 +105,9 @@
     </Compile>
     <EmbeddedResource Include="Listado\ListadoAsientos.resx">
       <DependentUpon>ListadoAsientos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Listado\ListadoTransacciones.resx">
+      <DependentUpon>ListadoTransacciones.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Vistas\Asientos.resx">
       <DependentUpon>Asientos.cs</DependentUpon>

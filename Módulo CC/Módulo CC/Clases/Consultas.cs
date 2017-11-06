@@ -80,9 +80,41 @@ namespace Módulo_CC.Clases
                 MessageBox.Show(p.Message);
 
             }
+
+            finally
+            {
+                cn.Close();
+            }
             return consulta;
         }
 
+        public DataTable BusquedaTransacciones()
+        {
+            var consulta = new DataTable();
+            try
+            {
+                cn.Open();
+
+                using (var tabla = new SqlDataAdapter("SELECT * from Transacciones", cn))
+                {
+                    tabla.SelectCommand.CommandType = CommandType.Text;
+                    tabla.Fill(consulta);
+                    cn.Close();
+                }
+
+            }
+            catch (SqlException p)
+            {
+                MessageBox.Show(p.Message);
+
+            }
+
+            finally
+            {
+                cn.Close();
+            }
+            return consulta;
+        }
         /* public DataTable IdentificadorCliente(string busqueda)
          {
              var consulta = new DataTable();

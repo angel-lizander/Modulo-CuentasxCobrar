@@ -46,7 +46,7 @@ namespace Módulo_CC.Listado
             Clientes.DisplayMember= dataGridView1.CurrentRow.Cells[2].Value.ToString();
             CuentaContable.DisplayMember= dataGridView1.CurrentRow.Cells[3].Value.ToString();
             string tipo = Convert.ToString(dataGridView1.CurrentRow.Cells[4].Value);
-            textBox1.Text = tipo;
+            textBox1.Text = dataGridView1.CurrentRow.Cells[0].Value.ToString();
 
             if (Convert.ToString(dataGridView1.CurrentRow.Cells[4].Value) == "DE")
             {
@@ -104,6 +104,8 @@ namespace Módulo_CC.Listado
             {
                 estado = false;
             }
+
+
             if (debito.Checked)
             {
                 tipomov = "DE";
@@ -114,7 +116,8 @@ namespace Módulo_CC.Listado
             }
 
             //var Asientos= new Clases.Asientos(txtdescripcion.Text, Convert.ToInt32(Clientes.SelectedValue.ToString()), Int32.Parse(CuentaContable.SelectedValue.ToString()),tipomov, Convert.ToDateTime(txtfecha.Text), estado, Convert.ToDecimal(txtmonto.Text),a);
-            var Asientos = new Clases.Asientos(txtdescripcion.Text, Convert.ToInt32(Clientes.SelectedValue.ToString()), Int32.Parse(CuentaContable.SelectedValue.ToString()), tipomov, Convert.ToDateTime(txtfecha.Text), estado, Convert.ToDecimal(txtmonto.Text), a);
+            // var Asientos = new Clases.Asientos(txtdescripcion.Text, Convert.ToInt32(Clientes.SelectedValue.ToString()), Int32.Parse(CuentaContable.SelectedValue.ToString()), tipomov, Convert.ToDateTime(txtfecha.Text), estado, Convert.ToDecimal(txtmonto.Text), a);
+            var Asientos = new Clases.Asientos(txtdescripcion.Text, Convert.ToInt32(Clientes.SelectedValue.ToString()), Convert.ToInt32(CuentaContable.SelectedValue.ToString()), tipomov, Convert.ToDateTime(txtfecha.Text), estado, Convert.ToDecimal(txtmonto.Text), a);
 
             Asientos.Editar();
             Datadridview();

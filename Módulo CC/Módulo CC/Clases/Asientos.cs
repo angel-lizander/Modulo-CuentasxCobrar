@@ -82,7 +82,7 @@ namespace Módulo_CC.Clases
             {
 
                 cn.Open();
-                string quety = ("Update Asientos  Set @Descripcion=Descripcion, @IDCliente= IDClientes, @Cuenta= Cuenta, @TipoMovimiento= TipoMovimiento, @Fecha= FechaAsiento, @Estado= Estado, @Monto=MontoAsiento WHERE IDAsientos=@IDAsientos");
+                string quety = ("Update Asientos set @Descripcion=Descripcion, @IDCliente=IDClientes, @Cuenta=Cuenta, @TipoMovimiento=TipoMovimiento, @Fecha=FechaAsiento, @Monto=MontoAsiento, @Estado=Estado WHERE IDAsientos=@IDAsientos");
                 SqlCommand myCommand = new SqlCommand(quety, cn);
                 myCommand.Parameters.AddWithValue("@Descripcion", Descripcion);
                 myCommand.Parameters.AddWithValue("@IDCliente", IDCliente);

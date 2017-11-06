@@ -1,6 +1,6 @@
-﻿namespace Módulo_CC.Vistas
+﻿namespace Módulo_CC.Listado
 {
-    partial class Transacciones
+    partial class ListadoTransacciones
     {
         /// <summary>
         /// Required designer variable.
@@ -42,8 +42,11 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
+            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.Actualizar = new System.Windows.Forms.Button();
+            this.Eliminar = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
             // groupBox1
@@ -61,10 +64,10 @@
             this.groupBox1.Controls.Add(this.label3);
             this.groupBox1.Controls.Add(this.label2);
             this.groupBox1.Controls.Add(this.label1);
-            this.groupBox1.Location = new System.Drawing.Point(12, 15);
+            this.groupBox1.Location = new System.Drawing.Point(445, 50);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(413, 266);
-            this.groupBox1.TabIndex = 0;
+            this.groupBox1.TabIndex = 1;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Procesar pago";
             // 
@@ -183,28 +186,50 @@
             this.label1.TabIndex = 0;
             this.label1.Text = "Tipo movimiento:";
             // 
-            // button1
+            // dataGridView1
             // 
-            this.button1.Location = new System.Drawing.Point(330, 296);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
-            this.button1.TabIndex = 1;
-            this.button1.Text = "Guardar";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Location = new System.Drawing.Point(12, 50);
+            this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.Size = new System.Drawing.Size(414, 282);
+            this.dataGridView1.TabIndex = 2;
+            this.dataGridView1.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellClick);
             // 
-            // Transacciones
+            // Actualizar
+            // 
+            this.Actualizar.Location = new System.Drawing.Point(533, 343);
+            this.Actualizar.Name = "Actualizar";
+            this.Actualizar.Size = new System.Drawing.Size(75, 23);
+            this.Actualizar.TabIndex = 3;
+            this.Actualizar.Text = "Actualizar";
+            this.Actualizar.UseVisualStyleBackColor = true;
+            this.Actualizar.Click += new System.EventHandler(this.Actualizar_Click);
+            // 
+            // Eliminar
+            // 
+            this.Eliminar.Location = new System.Drawing.Point(632, 343);
+            this.Eliminar.Name = "Eliminar";
+            this.Eliminar.Size = new System.Drawing.Size(75, 23);
+            this.Eliminar.TabIndex = 4;
+            this.Eliminar.Text = "Eliminar";
+            this.Eliminar.UseVisualStyleBackColor = true;
+            this.Eliminar.Click += new System.EventHandler(this.Eliminar_Click);
+            // 
+            // ListadoTransacciones
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(446, 330);
-            this.Controls.Add(this.button1);
+            this.ClientSize = new System.Drawing.Size(870, 410);
+            this.Controls.Add(this.Eliminar);
+            this.Controls.Add(this.Actualizar);
+            this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.groupBox1);
-            this.Name = "Transacciones";
-            this.Text = "Transacciones";
-            this.Load += new System.EventHandler(this.Transacciones_Load);
+            this.Name = "ListadoTransacciones";
+            this.Text = "ListadoTransacciones";
+            this.Load += new System.EventHandler(this.ListadoTransacciones_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -225,6 +250,8 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.Button Actualizar;
+        private System.Windows.Forms.Button Eliminar;
     }
 }
