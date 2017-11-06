@@ -30,7 +30,7 @@ IDClientes int,
 Cuenta int,
 TipoMovimiento char(2),
 FechaAsiento datetime, 
-MontoAsiento float,
+MontoAsiento decimal(4,0),
 Estado bit);
 
 Create table CuentasContable(
@@ -40,12 +40,5 @@ CuentasContables int)
 
  Insert into CuentasContable values (001002)
  Insert into Cuentas values ('Nota de credito', 001002,1)
-
- Create table Asientos(
-  noasiento int PRIMARY KEY,
-  descripcion varchar(200),
-  fechaasiento varchar(10),
-  cuenta int, 
-  tipomovimiento varchar(4),
-  monto float(50)
-)
+ insert into Clientes values ('Angel Lizander', 00100882963, 13000,0)
+ insert into Asientos values('Esto es un asiento', 2, 1300, 'DB', 230323, 1300, 1)

@@ -13,3 +13,4 @@ C:\Users\Angel Lizander\Documents\GitHub\Modulo-CuentasxCobrar\Módulo CC\Módul
 C:\Users\Angel Lizander\Documents\GitHub\Modulo-CuentasxCobrar\Módulo CC\Módulo CC\obj\Debug\Módulo CC.pdb
 C:\Users\Angel Lizander\Documents\GitHub\Modulo-CuentasxCobrar\Módulo CC\Módulo CC\obj\Debug\Módulo CC.csprojResolveAssemblyReference.cache
 C:\Users\Angel Lizander\Documents\GitHub\Modulo-CuentasxCobrar\Módulo CC\Módulo CC\obj\Debug\Módulo_CC.Vistas.Asientos.resources
+C:\Users\Angel Lizander\Documents\GitHub\Modulo-CuentasxCobrar\Módulo CC\Módulo CC\obj\Debug\Módulo_CC.Listado.ListadoAsientos.resources

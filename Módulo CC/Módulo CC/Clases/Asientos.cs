@@ -19,6 +19,7 @@ namespace Módulo_CC.Clases
         public DateTime Fecha { get; set; }
         public bool Estado { get; set; }
         public decimal Monto { get; set; }
+        public int IDAsientos { get; set; }
 
         public Asientos(string Descripcion, int IDCliente, int Cuenta, string TipoMovimiento, DateTime Fecha, bool Estado, decimal Monto)
         {
@@ -31,21 +32,35 @@ namespace Módulo_CC.Clases
             this.Monto = Monto;
         }
 
+        public Asientos(string Descripcion, int IDCliente, int Cuenta, string TipoMovimiento, DateTime Fecha, bool Estado, decimal Monto, int IDAsientos)
+        {
+            this.Descripcion = Descripcion;
+            this.IDCliente = IDCliente;
+            this.Cuenta = Cuenta;
+            this.TipoMovimiento = TipoMovimiento;
+            this.Fecha = Fecha;
+            this.Estado = Estado;
+            this.Monto = Monto;
+            this.IDAsientos = IDAsientos;
+        }
         public bool Registrar()
         {
             try
             {
 
                 cn.Open();
-                string quety = "INSERT INTO Asientos (Descripcion, IDCliente, Cuentas, TipoMovimiento, Fecha, Estado, Monto)";
-                   quety+= "Values @Descripcion, @IDCliente, @Cuenta, @TipoMovimiento, @Fecha, @Monto)";
+                string quety = "INSERT INTO Asientos (Descripcion, IDClientes, Cuenta, TipoMovimiento, FechaAsiento, MontoAsiento, Estado)";
+                   quety+= "Values (@Descripcion, @IDClientes, @Cuenta, @TipoMovimiento, @FechaAsiento, @MontoAsiento, @Estado)";
+
                 SqlCommand myCommand = new SqlCommand(quety, cn);
                 myCommand.Parameters.AddWithValue("@Descripcion", Descripcion);
-                myCommand.Parameters.AddWithValue("@IDCliente", IDCliente);
+                myCommand.Parameters.AddWithValue("@IDClientes", IDCliente);
                 myCommand.Parameters.AddWithValue("@Cuenta", Cuenta);
                 myCommand.Parameters.AddWithValue("@TipoMovimiento", TipoMovimiento);
-                myCommand.Parameters.AddWithValue("@Fecha", Fecha);
-                myCommand.Parameters.AddWithValue("@Monto", Monto);
+                myCommand.Parameters.AddWithValue("@FechaAsiento", Fecha);
+                myCommand.Parameters.AddWithValue("@MontoAsiento", Monto);
+                myCommand.Parameters.AddWithValue("@Estado", Estado);
+
                 myCommand.ExecuteNonQuery();
                 cn.Close();
                 MessageBox.Show("Datos insertados correctamente");
@@ -67,7 +82,7 @@ namespace Módulo_CC.Clases
             {
 
                 cn.Open();
-                string quety = ("Update Asientos  Set @Descripcion=Descripcion, @IDCliente= IDCliente, @Cuenta= Cuenta, @TipoMovimiento= TipoMovimiento, @Fecha= Fecha, @Estado= Estado, @Monto=Monto WHERE AsientoID=@AsientoID");
+                string quety = ("Update Asientos  Set @Descripcion=Descripcion, @IDCliente= IDClientes, @Cuenta= Cuenta, @TipoMovimiento= TipoMovimiento, @Fecha= FechaAsiento, @Estado= Estado, @Monto=MontoAsiento WHERE IDAsientos=@IDAsientos");
                 SqlCommand myCommand = new SqlCommand(quety, cn);
                 myCommand.Parameters.AddWithValue("@Descripcion", Descripcion);
                 myCommand.Parameters.AddWithValue("@IDCliente", IDCliente);
@@ -75,6 +90,9 @@ namespace Módulo_CC.Clases
                 myCommand.Parameters.AddWithValue("@TipoMovimiento", TipoMovimiento);
                 myCommand.Parameters.AddWithValue("@Fecha", Fecha);
                 myCommand.Parameters.AddWithValue("@Monto", Monto);
+                myCommand.Parameters.AddWithValue("@IDAsientos", IDAsientos);
+                myCommand.Parameters.AddWithValue("@Estado", Estado);
+
                 myCommand.ExecuteNonQuery();
                 cn.Close();
                 MessageBox.Show("Datos Actualizados");

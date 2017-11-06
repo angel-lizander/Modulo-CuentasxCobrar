@@ -21,13 +21,13 @@ namespace Módulo_CC.Vistas
         {
             string tipo;
             bool estado;
-            if (radioButton4.Checked)
+           if (radioButton4.Checked)
             {
-                tipo = "Debito";
+                tipo = "DE";
             }
             else
             {
-                tipo = "Credito";
+                tipo = "CR";
             }
             if (radioButton1.Checked)
             {
@@ -39,8 +39,8 @@ namespace Módulo_CC.Vistas
             }
 
 
-
-            var Asientos = new Clases.Asientos(txtdescripcion.Text, Convert.ToInt32(Clientes.SelectedValue.ToString()),Int32.Parse(CuentaContable.SelectedValue.ToString()), tipo, DateTime.Parse(txtfecha.Text), estado, Convert.ToDecimal(txtmonto.Text));
+           var Asientos = new Clases.Asientos(txtdescripcion.Text, Convert.ToInt32(Clientes.SelectedValue.ToString()),Int32.Parse(CuentaContable.SelectedValue.ToString()), tipo, DateTime.Parse(txtfecha.Text), estado, Convert.ToDecimal(txtmonto.Text));
+            Asientos.Registrar();
         }
 
         private void Asientos_Load(object sender, EventArgs e)

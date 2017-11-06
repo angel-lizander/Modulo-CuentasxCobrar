@@ -27,6 +27,21 @@ namespace Módulo_CC.Clases
             this.Limite = Limite;
             this.Estado = Estado;
         }
+
+        public Clientes(int ID, string Nombre, int Cedula, Double Limite, bool Estado)
+        {
+            this.ID = ID;
+            this.Nombre = Nombre;
+            this.Cedula = Cedula;
+            this.Limite = Limite;
+            this.Estado = Estado;
+        }
+
+        public Clientes(int ID)
+        {
+            this.ID = ID;
+            
+        }
         public bool Registrar()
         {
 
@@ -64,8 +79,9 @@ namespace Módulo_CC.Clases
             {
 
                 cn.Open();
-                string quety = ("Update Clientes set Nombre=@Nombre, Cedula=@Cedula, Limite=@Limite, Estado=@Estado) Values @Nombre, @Cedula, @Limite, @Estado");
+                string quety = ("Update Clientes set Nombre=@Nombre, Cedula=@Cedula, Limite=@Limite, Estado=@Estado WHERE IDClientes=@IDClientes");
                 SqlCommand myCommand = new SqlCommand(quety, cn);
+                myCommand.Parameters.AddWithValue("@IDClientes", ID);
                 myCommand.Parameters.AddWithValue("@Nombre", Nombre);
                 myCommand.Parameters.AddWithValue("@Cedula", Cedula);
                 myCommand.Parameters.AddWithValue("@Limite", Limite);
@@ -85,7 +101,27 @@ namespace Módulo_CC.Clases
 
         public bool Eliminar()
         {
-            throw new NotImplementedException();
+            try
+            {
+                cn.Open();
+                string query = ("DELETE FROM Clientes WHERE IDClientes=@ID");
+                SqlCommand mycommand = new SqlCommand(query, cn);
+                mycommand.Parameters.AddWithValue("@ID", ID);
+                mycommand.ExecuteNonQuery();
+                cn.Close();
+                MessageBox.Show("El empleado se eliminó correctamente");
+
+            }
+            catch (SqlException p)
+            {
+
+                MessageBox.Show(p.Message);
+            }
+            finally
+            {
+                cn.Close();
+            }
+            return true;
         }
 
        

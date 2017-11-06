@@ -17,27 +17,41 @@ namespace Módulo_CC
             InitializeComponent();
         }
 
-        private void clientesToolStripMenuItem1_Click(object sender, EventArgs e)
+        private void asientosToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            var Asientos = new Vistas.Asientos();
+            Asientos.ShowDialog();
+        }
+
+        private void clientesToolStripMenuItem_Click(object sender, EventArgs e)
         {
             var Cliente = new Vistas.Clientes();
             Cliente.ShowDialog();
         }
 
-        private void documentosToolStripMenuItem1_Click(object sender, EventArgs e)
+        private void documentosToolStripMenuItem_Click(object sender, EventArgs e)
         {
             var Documentos = new Vistas.Gestión_Documentos();
             Documentos.ShowDialog();
         }
 
-        private void transaccionesToolStripMenuItem1_Click(object sender, EventArgs e)
+        private void transaccionesToolStripMenuItem_Click(object sender, EventArgs e)
         {
             var Transacciones = new Vistas.Transacciones();
             Transacciones.ShowDialog();
         }
 
-        private void menuStrip1_ItemClicked(object sender, ToolStripItemClickedEventArgs e)
+        private void clientesToolStripMenuItem1_Click(object sender, EventArgs e)
         {
+            var Listado = new Vistas.ListaClientes();
+            Listado.ShowDialog();
+             
+        }
 
+        private void asientosToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            var Listado = new Listado.ListadoAsientos();
+            Listado.ShowDialog();
         }
     }
 }

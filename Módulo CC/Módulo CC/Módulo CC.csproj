@@ -47,11 +47,18 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Clases\Asientos.cs" />
+    <Compile Include="Clases\BusquedaCriterio.cs" />
     <Compile Include="Clases\Clientes.cs" />
     <Compile Include="Clases\Consultas.cs" />
     <Compile Include="Clases\Cuentas.cs" />
     <Compile Include="Clases\Transacciones.cs" />
     <Compile Include="Ifunciones.cs" />
+    <Compile Include="Listado\ListadoAsientos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Listado\ListadoAsientos.Designer.cs">
+      <DependentUpon>ListadoAsientos.cs</DependentUpon>
+    </Compile>
     <Compile Include="Vistas\Asientos.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -78,10 +85,10 @@
     <Compile Include="Vistas\Gestión Documentos.Designer.cs">
       <DependentUpon>Gestión Documentos.cs</DependentUpon>
     </Compile>
-    <Compile Include="Listado y actualizaciones\ListaClientes.cs">
+    <Compile Include="Listado\ListaClientes.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Listado y actualizaciones\ListaClientes.Designer.cs">
+    <Compile Include="Listado\ListaClientes.Designer.cs">
       <DependentUpon>ListaClientes.cs</DependentUpon>
     </Compile>
     <Compile Include="Vistas\Transacciones.cs">
@@ -90,6 +97,9 @@
     <Compile Include="Vistas\Transacciones.Designer.cs">
       <DependentUpon>Transacciones.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="Listado\ListadoAsientos.resx">
+      <DependentUpon>ListadoAsientos.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Vistas\Asientos.resx">
       <DependentUpon>Asientos.cs</DependentUpon>
     </EmbeddedResource>
@@ -111,7 +121,7 @@
     <EmbeddedResource Include="Vistas\Gestión Documentos.resx">
       <DependentUpon>Gestión Documentos.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Listado y actualizaciones\ListaClientes.resx">
+    <EmbeddedResource Include="Listado\ListaClientes.resx">
       <DependentUpon>ListaClientes.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Vistas\Transacciones.resx">
@@ -130,5 +140,6 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
