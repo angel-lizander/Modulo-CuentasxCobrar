@@ -122,5 +122,12 @@ namespace Módulo_CC.Listado
             Asientos.Editar();
             Datadridview();
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            var Asientos = new Clases.Asientos(Convert.ToInt32(dataGridView1.CurrentRow.Cells[0].Value));
+            Asientos.Eliminar();
+            Datadridview();
+        }
     }
 }

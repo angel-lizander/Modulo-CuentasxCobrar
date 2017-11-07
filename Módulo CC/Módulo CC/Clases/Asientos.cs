@@ -32,6 +32,12 @@ namespace Módulo_CC.Clases
             this.Monto = Monto;
         }
 
+        public Asientos(int Asientos)
+        {
+            this.IDAsientos = IDAsientos;
+        }
+
+
         public Asientos(string Descripcion, int IDCliente, int Cuenta, string TipoMovimiento, DateTime Fecha, bool Estado, decimal Monto, int IDAsientos)
         {
             this.Descripcion = Descripcion;
@@ -108,7 +114,27 @@ namespace Módulo_CC.Clases
 
         public bool Eliminar()
         {
-            throw new NotImplementedException();
+            try
+            {
+                cn.Open();
+                string query = ("DELETE FROM Asientos WHERE IDAsientos=@IDAsientos");
+                SqlCommand mycommand = new SqlCommand(query, cn);
+                mycommand.Parameters.AddWithValue("@IDAsientos", IDAsientos);
+                mycommand.ExecuteNonQuery();
+                cn.Close();
+                MessageBox.Show("El empleado se eliminó correctamente");
+
+            }
+            catch (SqlException p)
+            {
+
+                MessageBox.Show(p.Message);
+            }
+            finally
+            {
+                cn.Close();
+            }
+            return true;
         }
 
     }

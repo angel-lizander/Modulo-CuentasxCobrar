@@ -42,3 +42,10 @@ CuentasContables int)
  Insert into Cuentas values ('Nota de credito', 001002,1)
  insert into Clientes values ('Angel Lizander', 00100882963, 13000,0)
  insert into Asientos values('Esto es un asiento', 2, 1300, 'DB', 230323, 1300, 1)
+
+ create table Usuarios(
+ Usuario varchar(8),
+ Password varchar(10),
+ Privilegio char(2))
+ go
+ Insert into Usuarios values ('Angel',1234,'AA')

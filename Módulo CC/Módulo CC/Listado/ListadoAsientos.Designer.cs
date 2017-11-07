@@ -34,6 +34,8 @@
             this.label2 = new System.Windows.Forms.Label();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.Credito = new System.Windows.Forms.CheckBox();
+            this.debito = new System.Windows.Forms.CheckBox();
             this.Clientes = new System.Windows.Forms.ComboBox();
             this.label1 = new System.Windows.Forms.Label();
             this.CuentaContable = new System.Windows.Forms.ComboBox();
@@ -51,8 +53,6 @@
             this.btnActualizar = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
             this.textBox1 = new System.Windows.Forms.TextBox();
-            this.debito = new System.Windows.Forms.CheckBox();
-            this.Credito = new System.Windows.Forms.CheckBox();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
@@ -126,6 +126,26 @@
             this.groupBox1.TabIndex = 18;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Datos del asiento";
+            // 
+            // Credito
+            // 
+            this.Credito.AutoSize = true;
+            this.Credito.Location = new System.Drawing.Point(187, 162);
+            this.Credito.Name = "Credito";
+            this.Credito.Size = new System.Drawing.Size(59, 17);
+            this.Credito.TabIndex = 27;
+            this.Credito.Text = "Credito";
+            this.Credito.UseVisualStyleBackColor = true;
+            // 
+            // debito
+            // 
+            this.debito.AutoSize = true;
+            this.debito.Location = new System.Drawing.Point(112, 162);
+            this.debito.Name = "debito";
+            this.debito.Size = new System.Drawing.Size(57, 17);
+            this.debito.TabIndex = 26;
+            this.debito.Text = "Debito";
+            this.debito.UseVisualStyleBackColor = true;
             // 
             // Clientes
             // 
@@ -267,6 +287,7 @@
             this.button1.TabIndex = 20;
             this.button1.Text = "Eliminar";
             this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // textBox1
             // 
@@ -274,26 +295,6 @@
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(163, 20);
             this.textBox1.TabIndex = 21;
-            // 
-            // debito
-            // 
-            this.debito.AutoSize = true;
-            this.debito.Location = new System.Drawing.Point(112, 162);
-            this.debito.Name = "debito";
-            this.debito.Size = new System.Drawing.Size(57, 17);
-            this.debito.TabIndex = 26;
-            this.debito.Text = "Debito";
-            this.debito.UseVisualStyleBackColor = true;
-            // 
-            // Credito
-            // 
-            this.Credito.AutoSize = true;
-            this.Credito.Location = new System.Drawing.Point(187, 162);
-            this.Credito.Name = "Credito";
-            this.Credito.Size = new System.Drawing.Size(59, 17);
-            this.Credito.TabIndex = 27;
-            this.Credito.Text = "Credito";
-            this.Credito.UseVisualStyleBackColor = true;
             // 
             // ListadoAsientos
             // 
