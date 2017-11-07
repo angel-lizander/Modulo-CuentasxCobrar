@@ -15,3 +15,4 @@ C:\Users\Angel Lizander\Documents\GitHub\Modulo-CuentasxCobrar\Módulo CC\Módul
 C:\Users\Angel Lizander\Documents\GitHub\Modulo-CuentasxCobrar\Módulo CC\Módulo CC\obj\Debug\Módulo_CC.Vistas.Asientos.resources
 C:\Users\Angel Lizander\Documents\GitHub\Modulo-CuentasxCobrar\Módulo CC\Módulo CC\obj\Debug\Módulo_CC.Listado.ListadoAsientos.resources
 C:\Users\Angel Lizander\Documents\GitHub\Modulo-CuentasxCobrar\Módulo CC\Módulo CC\obj\Debug\Módulo_CC.Listado.ListadoTransacciones.resources
+C:\Users\Angel Lizander\Documents\GitHub\Modulo-CuentasxCobrar\Módulo CC\Módulo CC\obj\Debug\Módulo_CC.Vistas.Login.resources

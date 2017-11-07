@@ -19,15 +19,52 @@ namespace Módulo_CC.Vistas
         {
             InitializeComponent();
         }
-        private int Login(string User, string Password)
+        private int Logeador(string User, string Password)
         {
             int pase = 0;
+            SqlDataReader lector;
 
             try
             {
-                string consulta = "Select User From Usuarios Where Usuario=@User AND Password=@Password");
 
-                    }
+                string consulta = "Select User From Usuarios Where Usuario=@User AND Password=@Password";
+                SqlCommand myCommand = new SqlCommand(consulta, cn);
+                myCommand.Parameters.AddWithValue("@User", textBox1);
+                myCommand.Parameters.AddWithValue("@Password", textBox2.Text);
+                lector = myCommand.ExecuteReader();
+
+
+                while (lector.Read())
+                {
+                    pase = 1;
+                }
+            }
+
+            catch (SqlException p)
+            {
+
+                MessageBox.Show(p.Message);
+            }
+
+            return pase;
+
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            //Estoy al tanto de que este login está vulnerable a SQL Injection. No tuve tiempo de encriptar el pass. Lo haré en el próximo entregable. 
             
+            if(Logeador(textBox1.Text, textBox2.Text) == 1)
+            {
+                var frmPrincipal = new Principal();
+                frmPrincipal.Show();
+            }
+
+            else
+            {
+                MessageBox.Show("No Juan Pablo, eso no está en la base de datos");
+            }
+
+        }
     }
 }
