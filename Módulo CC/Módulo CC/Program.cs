@@ -16,7 +16,7 @@ namespace Módulo_CC
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Vistas.Login());
+            Application.Run(new Principal());
         }
     }
 }
